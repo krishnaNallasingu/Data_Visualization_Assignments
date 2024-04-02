@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta Imports -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Website for visualisation of the Data Viz project">
+
+  <!-- Title of the Website -->
+  <title>Data Visualisation Project</title>
+
+  <!-- Adding Bootstrap Links -->
+  <link rel="stylesheet" href="styles/bootstrap.css" type="text/css">
+  <link rel="stylesheet" href="styles/bootstrap.min.css" type="text/css">
+
+
+
+</head>
+
+<body style="background-color: floralwhite;">
+
+  <div class="container">
+    <h1 class="text-center">
+      Data Visualisation Assignment 1
+    </h1>
+    <hr class="w-75 m-lg-5 p-1">
+
+    <h1 class="text-center">
+      Question 1
+    </h1>
+    <!-- Filter Bar -->
+    <div class="container">
+      <p class="fw-bold">Choose the Year</p>
+      <p>2011 &nbsp;&nbsp;2012 &nbsp;&nbsp; 2013</p>
+      <input type="range" min="2011" max="2013" value="2011" class="slider" id="yearSlider" />
+    </div>
+
+
+
+
+    <!-- Adding Question 1 Bar Graph and Scatter Chart content  -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="container" id="bar_graph">
+            <h2 class="text-center">Bar Graph</h2>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="container" id="scatter_graph">
+            <h2 class="text-center">Scatter Plot</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="w-75 m-lg-5 p-1">
+
+
+    <h1 class="text-center">
+      Question 2
+    </h1>
+
+    <div class="container m-lg-4 p-lg-4">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="p-4">
+            <p class="fw-bold">Choose the Radius</p>
+            <p>1 to 8</p>
+            <input type="range" min="1" max="8" value="1" class="slider" id="radiusSlider" />
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4">
+            <p class="fw-bold">Choose Zoom or Brush</p>
+            <p>Zoom&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Brush</p>
+            <input type="range" min="1" max="2" value="1" class="slider" id="radiusSlider2" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Adding Question 2 Bar Graph and Scatter Chart content  -->
+    <div>
+      <g>
+        <div class="row container m-lg-4 p-lg-4">
+          <div class="col-md-4" style="width: 50px; height: 500;">
+            <div id="scatter_graph2">
+
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div id="scatter_plot2">
+
+            </div>
+          </div>
+        </div>
+      </g>
+    </div>
+
+    <p class="fs-5"><span style="color:deeppink" class="fs-3 fw-bold ">
+        Zoom Feature:
+      </span> Hover to the Graph,
+      Either scroll the mouse wheel upwards to zoom In or downwards to zoom Out or perform a two-finger pinch gesture in
+      different directions.
+    </p>
+
+    <hr class="w-75 m-lg-5 p-1">
+
+
+    <!-- Adding D3 JS scripts -->
+    <script src=" d3_cdn/d3.v7.js">
+    </script>
+    <script src="d3_cdn/d3.v7.min.js"></script>
+
+    <!-- Adding script files -->
+    <script type="module" src="scripts/Q1/BarChart.js"></script>
+    <script type="module" src="scripts/Q1/ScatterPlot.js"></script>
+    <script type="module" src="scripts/Q2/ScatterPlot.js"></script>
+    <script type="module" src="scripts/Q2/ScatterAxis.js"></script>
+
+  </div>
+</body>
+
+
+
+</html>
